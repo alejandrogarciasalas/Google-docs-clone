@@ -1,0 +1,9 @@
+{
+  "name": "Google Docs Clone",
+  "version": "0.0.1",
+  "description": "a simple google docs clone made with socket.io",
+  "dependencies": {
+    "express": "^4.10.2",
+    "socket.io": "^1.3.5"
+  }
+}

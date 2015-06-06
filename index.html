@@ -6,6 +6,9 @@
   <body>
 
     <form action="">
+    <ul id="connectedUsers">
+      
+    </ul>
     <textarea id="doc" rows="4" cols="50">
 
     </textarea>
@@ -21,6 +24,11 @@
       socket.on('writing', function(txt){
         $("#test").append().text(txt);
         $('#doc').val(txt);
+      });
+      socket.on('join', function(connectedUsers){
+        for(var i=0; i < connectedUsers.length; i++){
+          $('#connectedUsers').append($('<li>').text(connectedUsers[i]));
+        }
       });
     </script>
   </body>
